@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<div class="card" style="max-width: 400px; margin: 4rem auto;">
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h2 style="margin-bottom: 0.5rem; font-size: 2rem;">Mech-Tech</h2>
+    <p style="color: #666;">Acesse o sistema</p>
+  </div>
+  <% if (error) { %>
+    <div class="error"><%= error %></div>
+  <% } %>
+  <form action="/login" method="POST" style="max-width: 100%;">
+    <label for="username">Usuário</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="password">Senha</label>
+    <input type="password" id="password" name="password" required>
+    
+    <button type="submit" class="btn" style="margin-top: 1rem; width: 100%; font-size: 1.1rem; padding: 0.75rem;">Entrar</button>
+  </form>
+</div>
+<%- include('partials/footer') %>

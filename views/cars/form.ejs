@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+<div class="card">
+  <h2>Cadastrar Carro</h2>
+  
+  <form action="/cars/create" method="POST">
+    <label for="clientId">Cliente Proprietário</label>
+    <select id="clientId" name="clientId" required>
+      <option value="">Selecione um cliente...</option>
+      <% clients.forEach(client => { %>
+        <option value="<%= client.id %>"><%= client.name %></option>
+      <% }) %>
+    </select>
+
+    <label for="brand">Marca</label>
+    <input type="text" id="brand" name="brand" placeholder="Ex: Volkswagen" required>
+    
+    <label for="model">Modelo</label>
+    <input type="text" id="model" name="model" placeholder="Ex: Gol 1.6" required>
+    
+    <label for="year">Ano</label>
+    <input type="number" id="year" name="year" placeholder="2018" required>
+
+    <label for="plate">Placa</label>
+    <input type="text" id="plate" name="plate" placeholder="ABC-1234" required>
+    
+    <div style="margin-top: 1rem;">
+      <button type="submit" class="btn">Salvar Carro</button>
+      <a href="/cars" class="btn" style="background-color: #6c757d; margin-left: 0.5rem;">Cancelar</a>
+    </div>
+  </form>
+</div>
+<%- include('../partials/footer') %>

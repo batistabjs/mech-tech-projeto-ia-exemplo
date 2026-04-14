@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+<div class="card">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>Estoque de Peças</h2>
+    <a href="/parts/create" class="btn">+ Nova Peça</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Preço (R$)</th>
+        <th>Quantidade em Estoque</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (parts.length === 0) { %>
+        <tr>
+          <td colspan="4" style="text-align: center;">Nenhuma peça cadastrada.</td>
+        </tr>
+      <% } else { %>
+        <% parts.forEach(part => { %>
+          <tr>
+            <td>#<%= part.id %></td>
+            <td><strong><%= part.name %></strong></td>
+            <td>R$ <%= part.price.toFixed(2).replace('.', ',') %></td>
+            <td><%= part.stock %> unidades</td>
+          </tr>
+        <% }) %>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+<%- include('../partials/footer') %>

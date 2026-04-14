@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<div class="card">
+  <h2>Cadastrar Serviço</h2>
+  
+  <form action="/services/create" method="POST">
+    <label for="name">Nome do Serviço</label>
+    <input type="text" id="name" name="name" placeholder="Ex: Troca de Óleo" required>
+    
+    <label for="description">Descrição</label>
+    <textarea id="description" name="description" rows="3" placeholder="Detalhes do serviço..." required></textarea>
+    
+    <label for="price">Custo Estimado (R$)</label>
+    <input type="number" id="price" name="price" step="0.01" min="0" placeholder="150.00" required>
+    
+    <div style="margin-top: 1rem;">
+      <button type="submit" class="btn">Salvar Serviço</button>
+      <a href="/services" class="btn" style="background-color: #6c757d; margin-left: 0.5rem;">Cancelar</a>
+    </div>
+  </form>
+</div>
+<%- include('../partials/footer') %>

@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+<div class="card">
+  <h1>Bem-vindo ao Mech-Tech</h1>
+  <p>Sistema de gestão moderno e eficiente para sua oficina mecânica.</p>
+</div>
+
+<div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+  <div class="card" style="flex: 1; min-width: 200px; text-align: center; border-top: 4px solid var(--secondary-blue);">
+    <h3>Gestão de Clientes</h3>
+    <p style="color: #666; margin-bottom: 1.5rem;">Cadastre e gerencie a base de clientes da oficina.</p>
+    <a href="/clients" class="btn">Acessar</a>
+  </div>
+  <div class="card" style="flex: 1; min-width: 200px; text-align: center; border-top: 4px solid var(--secondary-blue);">
+    <h3>Gestão de Carros</h3>
+    <p style="color: #666; margin-bottom: 1.5rem;">Controle os veículos atrelados aos clientes.</p>
+    <a href="/cars" class="btn">Acessar</a>
+  </div>
+  <div class="card" style="flex: 1; min-width: 200px; text-align: center; border-top: 4px solid var(--secondary-blue);">
+    <h3>Estoque de Peças</h3>
+    <p style="color: #666; margin-bottom: 1.5rem;">Controle seu estoque de peças e valores.</p>
+    <a href="/parts" class="btn">Acessar</a>
+  </div>
+  <div class="card" style="flex: 1; min-width: 200px; text-align: center; border-top: 4px solid var(--secondary-blue);">
+    <h3>Catálogo de Serviços</h3>
+    <p style="color: #666; margin-bottom: 1.5rem;">Gerencie os serviços prestados pela mecânica.</p>
+    <a href="/services" class="btn">Acessar</a>
+  </div>
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": "Troca de Óleo", "description": "Troca completa do óleo do motor", "price": 150.0 },
+  { "id": 2, "name": "Revisão de Freios", "description": "Verificação das pastilhas e discos", "price": 200.0 }
+]

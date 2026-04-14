@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": "Filtro de Óleo", "price": 45.0, "stock": 20 },
+  { "id": 2, "name": "Pastilha de Freio", "price": 120.0, "stock": 10 }
+]

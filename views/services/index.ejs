@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+<div class="card">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>Catálogo de Serviços</h2>
+    <a href="/services/create" class="btn">+ Novo Serviço</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Serviço</th>
+        <th>Descrição detalhada</th>
+        <th>Preço (R$)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (services.length === 0) { %>
+        <tr>
+          <td colspan="4" style="text-align: center;">Nenhum serviço cadastrado.</td>
+        </tr>
+      <% } else { %>
+        <% services.forEach(service => { %>
+          <tr>
+            <td>#<%= service.id %></td>
+            <td><strong><%= service.name %></strong></td>
+            <td><%= service.description %></td>
+            <td>R$ <%= service.price.toFixed(2).replace('.', ',') %></td>
+          </tr>
+        <% }) %>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+<%- include('../partials/footer') %>

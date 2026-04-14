@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mech-Tech | Oficina Automotiva</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <% if (isAuthenticated) { %>
+    <header>
+      <div class="logo">
+        <h2 style="margin:0; color: white;">Mech-Tech</h2>
+      </div>
+      <nav>
+        <a href="/">Dashboard</a>
+        <a href="/clients">Clientes</a>
+        <a href="/cars">Carros</a>
+        <a href="/parts">Peças</a>
+        <a href="/services">Serviços</a>
+        <a href="/logout">Sair</a>
+      </nav>
+    </header>
+  <% } %>
+  <main>
